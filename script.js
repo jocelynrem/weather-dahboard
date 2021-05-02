@@ -1,3 +1,6 @@
+var formSubmitHandler = function (event) {
+    event.preventDefault();
+
 const settings = {
 	"async": true,
 	"crossDomain": true,

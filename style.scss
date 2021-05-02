@@ -8,12 +8,22 @@ $blue: #0d6efd;
     text-transform: uppercase;
     }
 
+    @mixin small-title-style {
+        margin: 20px 0 0 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+
 body {
     font-family: $font-stack;
 }
 
 h3 {
    @include title-style(); 
+}
+
+h4 {
+    @include small-title-style();
 }
 
 .banner {
@@ -25,4 +35,26 @@ h3 {
     background-color: darken($blue, 40%);
     color: white;
     padding: 8px;
+}
+
+.card {
+    width: 7rem;
+    margin: 0 5px;
+    background-color: darken($blue, 40%);
+    color: white;
+}
+
+h5 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#resultsContainer {
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+
+.divider {
+    border-bottom: solid 2px black;
+    padding-bottom: 20px;
 }

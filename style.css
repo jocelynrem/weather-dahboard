@@ -9,6 +9,12 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .banner {
   font-size: 25px;
   font-weight: bold;
@@ -16,6 +22,29 @@ h3 {
   background-color: #01193d;
   color: white;
   padding: 8px;
+}
+
+.card {
+  width: 7rem;
+  margin: 0 5px;
+  background-color: #01193d;
+  color: white;
+}
+
+h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#resultsContainer {
+  border: 1px solid gray;
+  margin-top: 20px;
+}
+
+.divider {
+  border-bottom: solid 2px black;
+  padding-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
