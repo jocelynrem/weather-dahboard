@@ -3,39 +3,43 @@ body {
 }
 
 h3 {
-  margin: 20px 0 0 0;
-  font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 h4 {
-  margin: 20px 0 10px 0;
-  font-size: 20px;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .banner {
   font-size: 25px;
   font-weight: bold;
+  background-image: linear-gradient(360deg, #01193d, #012e70);
   text-align: center;
-  background-color: #01193d;
   color: white;
   padding: 8px;
 }
 
-.card {
-  max-width: 9rem;
-  background-color: #01193d;
-  color: white;
-  margin: 0 auto;
-  padding: 0;
+.fiveDayContainer {
+  margin-left: 2px;
 }
 
-h5 {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: bold;
+.card {
+  background-image: linear-gradient(360deg, #01193d, #012e70);
+  max-width: 7rem;
+  color: white;
+  padding: 0;
 }
 
 #resultsContainerMain {
@@ -47,6 +51,11 @@ h5 {
   border-bottom: solid 2px black;
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+
+#mainSearch {
+  background-color: #0143a3;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

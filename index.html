@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container-fluid banner bg-gradient"> <!-- Heading strip-->
+    <div class="container-fluid banner"> <!-- Heading strip-->
         Weather Dashboard
     </div>
       
@@ -26,7 +26,7 @@
             <input type="text" placeholder="City Name" class="form-control" id="citySearch">
         </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" id="mainSearch" type="button">Search</button>
+                <button class="btn" id="mainSearch" type="button">Search</button>
                 <div class="divider"></div>
                 <button class="btn btn-secondary searchHistory" type="button">Search History</button>
 
@@ -39,7 +39,7 @@
 
               </div>
             <h4>Five Day Forecast:</h4>
-            <div class="row d-flex justify-content-between"> <!-- Five day forecast card container-->
+            <div class="row d-flex justify-content-between fiveDayContainer"> <!-- Five day forecast card container-->
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Date</h5>
