@@ -1,0 +1,28 @@
+$font-stack: sans-serif;
+$blue: #0d6efd;
+
+@mixin title-style {
+    margin: 20px 0 0 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+
+body {
+    font-family: $font-stack;
+}
+
+h3 {
+   @include title-style(); 
+}
+
+.banner {
+    font: {
+        size: 25px;
+        weight: bold;
+    }
+    text-align: center;
+    background-color: darken($blue, 40%);
+    color: white;
+    padding: 8px;
+}

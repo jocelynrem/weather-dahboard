@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+
+h3 {
+  margin: 20px 0 0 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.banner {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #01193d;
+  color: white;
+  padding: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

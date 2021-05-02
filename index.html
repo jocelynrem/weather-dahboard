@@ -14,12 +14,22 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container-fluid banner bg-gradient">
+        Weather Dashboard
+    </div>
+      
     <div class="container">
-        <div class="row align-items-start">
-          <div class="col">
-            Search Column
-          </div>
-          <div class="col">
+        <div class="row align-items-center">
+          <div class="col-4">
+           <h3>  Search for a city: </h3>
+           <div class="input-group mb-3">
+            <input type="text" placeholder="City Name" class="form-control">
+        </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Search</button>
+          </div>          
+        </div>
+          <div class="col-8">
             Results Column
           </div>
         </div>
