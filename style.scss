@@ -9,7 +9,7 @@ $blue: #0d6efd;
     }
 
     @mixin small-title-style {
-        margin: 20px 0 0 0;
+        margin: 20px 0 10px 0;
         font-size: 20px;
         font-weight: bold;
         }
@@ -38,10 +38,11 @@ h4 {
 }
 
 .card {
-    width: 7rem;
-    margin: 0 5px;
+    max-width: 9rem;
     background-color: darken($blue, 40%);
     color: white;
+    margin: 0 auto;
+    padding: 0;
 }
 
 h5 {
@@ -49,12 +50,13 @@ h5 {
     text-transform: uppercase;
     font-weight: bold;
 }
-#resultsContainer {
+#resultsContainerMain {
     border: 1px solid gray;
     margin-top: 20px;
 }
 
 .divider {
     border-bottom: solid 2px black;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }

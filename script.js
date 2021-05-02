@@ -1,5 +1,11 @@
+var mainSearchBtnEl = document.getElementById('#mainSearch');
+var searchHistoryBtnEls = document.querySelector('.searchHistory');
+var resultsContainerMain = document.querySelector('#resultsContainerMain');
+var cityInputEl = document.querySelector('#citySearch');
+
 var formSubmitHandler = function (event) {
     event.preventDefault();
+}
 
 const settings = {
 	"async": true,
