@@ -6,32 +6,19 @@ var currentDate = moment().format("(MM/DD/YYYY)");
 $("#date").text(' ' + currentDate);
 console.log(currentDate);
 
-// for (let i = 1; i <= 5; i++) {
-//     moment('MM/DD.YYYY').add(1, 'd') = fiveDay[i];
-//     console.log('fiveDay:', fiveDay)
 
-// }
+for (let i = 1; i <= 5; i++) {
+    $(i).each(function() {
+        $('.fiveDayContainer').html('<div class="card"><div class="card-body"><h5 class="card-title"></h5><img src="" alt="icon" id="icon"><p class="card-text"></p></div></div>')
+    });
+    var forecastDate = moment().add(i, 'days').format('MM/DD/YYYY');
+    console.log('Forecast Date:', forecastDate)
+    $('.card-title').text(forecastDate);
+};
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
 };
-
-//Current Weather
-// const settings = {
-//   async: true,
-//   crossDomain: true,
-//   url:
-//     "https://community-open-weather-map.p.rapidapi.com/weather?q=Raleigh%2C%20us&lat=0&lon=0&callback=test&id=2172797&lang=null&units=%22metric%22%20or%20%22imperial%22&mode=xml%2C%20html",
-//   method: "GET",
-//   headers: {
-//     "x-rapidapi-key": "b0bf9f381cmsh5222c721b80dd11p1937dejsn06a8ef11603c",
-//     "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-//   },
-// };
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
 
 // function searchResult(response) {
 //     var city = response.name;
