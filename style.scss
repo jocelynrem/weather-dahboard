@@ -34,8 +34,13 @@ h4 {
 }
 
 h5 {
-    font-size: 14px;
+    font-size: 15px;
     @include title-style();
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 1.25;
 }
 
 .banner {
@@ -49,9 +54,9 @@ h5 {
     padding: 8px;
 }
 
-.fiveDayContainer{
-    margin-left: 2px;
-}
+// .fiveDayContainer{
+//     margin-left: 2px;
+// }
 
 .card {
     @include background();
