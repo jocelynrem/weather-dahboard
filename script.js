@@ -7,14 +7,12 @@ $("#date").text(' ' + currentDate);
 console.log(currentDate);
 
 
-for (let i = 1; i <= 5; i++) {
-    $(i).each(function() {
-        $('.fiveDayContainer').html('<div class="card"><div class="card-body"><h5 class="card-title"></h5><img src="" alt="icon" id="icon"><p class="card-text"></p></div></div>')
+for (let i = 2; i <= 6; i++) {
+    $(function() {
+        $('.fiveDayContainer').append('<div class="card"><div class="card-body"><h5 class="card-title"></h5><img src="" alt="icon" id="icon"><p class="card-text"></p></div></div>')
+        $('.card-title').each(function(i){$(this).text(moment().add(i, 'days').format('MM/DD/YYYY'))});
     });
-    var forecastDate = moment().add(i, 'days').format('MM/DD/YYYY');
-    console.log('Forecast Date:', forecastDate)
-    $('.card-title').text(forecastDate);
-};
+}
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
@@ -54,6 +52,3 @@ $.ajax(settings).done(function (response) {
       $('#icon').html('<img src="http://openweathermap.org/img/w/' + icon +'.png" alt="icon">')
     })
 });
-
-
-
