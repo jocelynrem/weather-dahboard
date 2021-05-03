@@ -8,6 +8,7 @@ $blue: #0d6efd;
 @mixin title-style {
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 1;
     }
 
 body {
@@ -17,13 +18,19 @@ body {
 h3 {
    @include title-style(); 
    font-size: 20px;
-   margin-top: 20px;
 }
 
 h4 {
     @include title-style();
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.topMargin {
     margin: 20px 0 10px 0;
+}
+
+.leftMargin {
+    margin-left: 10px;
 }
 
 h5 {
