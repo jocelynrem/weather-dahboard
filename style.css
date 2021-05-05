@@ -16,6 +16,21 @@ h4 {
   font-size: 18px;
 }
 
+h5 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 1.25;
+  padding: 0;
+}
+
 .topMargin {
   margin: 20px 0 10px 0;
 }
@@ -24,25 +39,13 @@ h4 {
   margin-left: 10px;
 }
 
-h5 {
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-h6 {
-  font-size: 12px;
-  line-height: 1.25;
-}
-
 .banner {
   font-size: 25px;
   font-weight: bold;
   background-image: linear-gradient(360deg, #01193d, #012e70);
   text-align: center;
   color: white;
-  padding: 8px;
+  padding: 15px;
 }
 
 .card {
@@ -50,10 +53,11 @@ h6 {
   max-width: 7rem;
   color: white;
   padding: 0;
+  margin-top: 5px;
 }
 
 #resultsContainerMain {
-  border: 1px solid gray;
+  border: 5px solid #0143a3;
   margin-top: 20px;
 }
 
