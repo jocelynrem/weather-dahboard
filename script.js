@@ -1,6 +1,4 @@
 var mainSearchBtnEl = $("#mainSearch");
-var searchHistoryBtnEls = $(".searchHistory");
-var resultsContainerMain = $("#resultsContainerMain");
 var cityInputEl = $("#citySearch");
 var currentDate = moment().format("(MM/DD/YYYY)");
 $("#date").text(" " + currentDate);
@@ -29,25 +27,25 @@ $(mainSearchBtnEl).click(function () {
     async: true,
     crossDomain: true,
     url:
-      "http://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&limit=1&appid=ed93848b5b0c63d91becb0502f59e1d9",
+      "https://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&limit=1&appid=ed93848b5b0c63d91becb0502f59e1d9",
     method: "GET",
   };
 
   $.ajax(locationInput).done(function (city) {
     console.log('city:', city)
     lat = city[0].lat
-    console.log('Newlat:', lat)
     lon = city[0].lon
-    console.log('Newlon:', lon)
     cityName = city[0].name
   }).then(function() {
     refreshWeather();
+  }).then(function() {
+    localStorage.setItem('searched', cityInput);
+    $(".searchHistory").append('<button class="btn btn-secondary grayBtn" type="button">'+ cityInput +'</button>');
+  });
   })
-})
 
 
 function refreshWeather() {
-console.log('refreshWeather function ran')
 localWeather = {
   async: true,
   crossDomain: true,
@@ -70,7 +68,7 @@ $.ajax(localWeather).done(function (response) {
     $("#wind").text("Wind Speed: " + wind);
     $("#humidity").text("Humidity: " + humidity + "%");
     $("#icon").html(
-      '<img src="http://openweathermap.org/img/w/' + icon + '.png" alt="icon">'
+      '<img src="https://openweathermap.org/img/w/' + icon + '.png" alt="icon">'
     );
 
     if (UV <= 2) {
