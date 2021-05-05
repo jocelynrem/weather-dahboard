@@ -5,14 +5,14 @@ var cityInputEl = $("#citySearch");
 var currentDate = moment().format("(MM/DD/YYYY)");
 $("#date").text(" " + currentDate);
 
-function initAutocomplete() {
-  var autocomplete = new google.maps.places.Autocomplete(
-    document.getElementById('citySearch'),
-  {
-    componentRestrictions: {'country': ['US']},
-    fields: ['geometry']
-  });
- }
+// function initAutocomplete() {
+//   var autocomplete = new google.maps.places.Autocomplete(
+//     document.getElementById('citySearch'),
+//   {
+//     componentRestrictions: {'country': ['US']},
+//     fields: ['geometry']
+//   });
+//  }
 
 
 var cityInput;
