@@ -18,12 +18,21 @@ var lat = 35.787743;
 var lon = -78.644257;
 getWeather();
 
-$("#mainSearch").click(function () {
+
+var input = document.getElementById('citySearch')
+  input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("mainSearch").click();
+  }
+});
+
+  
+function mainSearch() {
   cityInput = cityInputEl.val();
   setHistory();
-  getCity();
-  
-})
+  getCity()
+}
 
 function setHistory() {
   cityInputEl.val('')
