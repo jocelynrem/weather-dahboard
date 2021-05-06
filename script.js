@@ -22,11 +22,14 @@ $("#mainSearch").click(function () {
   cityInput = cityInputEl.val();
   setHistory();
   getCity();
+  
 })
 
 function setHistory() {
+  cityInputEl.val('')
   localStorage.setItem('searched', cityInput);
   $(".searchHistory").append('<button class="btn btn-secondary grayBtn" type="button">' + cityInput + '</button>');
+  // $("#citySearch").empty();
   $('.grayBtn').click(function () {
     cityInput = $(this).text();
     console.log('History Button Click:', cityInput);
