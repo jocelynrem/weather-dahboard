@@ -77,4 +77,14 @@ h6 {
   width: 100%;
 }
 
+.hide {
+  display: none;
+}
+
+#spelling {
+  color: red;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

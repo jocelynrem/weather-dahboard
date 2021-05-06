@@ -1,15 +1,6 @@
 var currentDate = moment().format("(MM/DD/YYYY)");
 $("#date").text(" " + currentDate);
 
-// function initAutocomplete() {
-//   var autocomplete = new google.maps.places.Autocomplete(
-//     document.getElementById('citySearch'),
-//   {
-//     componentRestrictions: {'country': ['US']},
-//     fields: ['geometry']
-//   });
-//  }
-
 var cityInputEl = $("#citySearch");
 var cityInput;
 var localWeather;
@@ -18,7 +9,7 @@ var lat = 35.787743;
 var lon = -78.644257;
 getWeather();
 
-
+//press enter to search
 var input = document.getElementById('citySearch')
   input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
@@ -27,26 +18,31 @@ var input = document.getElementById('citySearch')
   }
 });
 
-  
+// what heppens when user inputs a city  
 function mainSearch() {
   cityInput = cityInputEl.val();
-  setHistory();
   getCity()
+  setHistory();
+// } if (){
+//   setHistory();
+// } 
+// else {
+//   $('spelling').classList.remove('hide');
 }
 
+//sets the buttons for previous searches
 function setHistory() {
   cityInputEl.val('')
   localStorage.setItem('searched', cityInput);
   $(".searchHistory").append('<button class="btn btn-secondary grayBtn" type="button">' + cityInput + '</button>');
-  // $("#citySearch").empty();
-  $('.grayBtn').click(function () {
+  $('.grayBtn').click(function() {
     cityInput = $(this).text();
     console.log('History Button Click:', cityInput);
     getCity();
   })
 }
 
-
+// retrieves lattitude and longitude for getWeather function
 function getCity() {
   var locationInput = {
     async: true,
@@ -65,6 +61,7 @@ function getCity() {
   })
 }
 
+//gets the weather and fills in all related inputs
 function getWeather() {
   localWeather = {
     async: true,
