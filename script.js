@@ -7,6 +7,7 @@ var localWeather;
 var cityName;
 var lat = 35.787743;
 var lon = -78.644257;
+var city = [];
 getWeather();
 
 //press enter to search
@@ -18,7 +19,7 @@ var input = document.getElementById('citySearch')
   }
 });
 
-// what heppens when user inputs a city  
+// what happens when user inputs a city  
 function mainSearch() {
   cityInput = cityInputEl.val();
   getCity()
@@ -32,15 +33,16 @@ function mainSearch() {
 
 //sets the buttons for previous searches
 function setHistory() {
-  cityInputEl.val('')
-  localStorage.setItem('searched', cityInput);
-  $(".searchHistory").append('<button class="btn btn-secondary grayBtn" type="button">' + cityInput + '</button>');
-  $('.grayBtn').click(function() {
-    cityInput = $(this).text();
-    console.log('History Button Click:', cityInput);
-    getCity();
-  })
+    cityInputEl.val('')
+    localStorage.setItem('searched', cityInput);
+    $(".searchHistory").append('<button class="btn btn-secondary grayBtn" type="button">' + cityInput + '</button>');
 }
+
+$(document).on('click', '.grayBtn', function() {
+  cityInput = $(this).text();
+  console.log('History Button Click:', cityInput);
+  getCity();
+})
 
 // retrieves lattitude and longitude for getWeather function
 function getCity() {
@@ -57,8 +59,8 @@ function getCity() {
     lon = city[0].lon
     cityName = city[0].name
   }).then(function () {
-    getWeather();
-  })
+      getWeather(); 
+})
 }
 
 //gets the weather and fills in all related inputs
@@ -130,5 +132,22 @@ function getWeather() {
   // cityInputEl.empty().val();
 
 }
+
+//autocompletes search input with Google Places API
+function initAutocomplete() {
+  var autocomplete = new google.maps.places.Autocomplete(
+    document.getElementById('citySearch'),
+  {
+    componentRestrictions: {'country': ['US']},
+    fields: ['geometry']
+  });
+ 
+  var place = autocomplete.getPlaces()[0]
+  var latitude = place.geometry.location.lat()
+  var longitude = place.geometry.location.lng()
+  console.log('latitude:', latitude)
+  console.log('longitude:', longitude)
+ }
+
 
 
